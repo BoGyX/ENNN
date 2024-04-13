@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f9a4d69cc61548e88c7d1750df63e2ac" Name="Diagram1">
+        <EntityTypeShape EntityType="IL_PATIOModel.IL_PATIO_RESTARAUNT" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IL_PATIOModel.ITALIAN_MENU_PATIO" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IL_PATIOModel.JAPANESE_MENU_PATIO" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IL_PATIOModel.PATIO_ADDRESS" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="IL_PATIOModel.VISITOR" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IL_PATIOModel.WAITER" Width="1.5" PointX="0.75" PointY="13.375" IsExpanded="true" />
+        <AssociationConnector Association="IL_PATIOModel.FK__IL_PATIO___ITALI__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="IL_PATIOModel.FK__IL_PATIO___JAPAN__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="IL_PATIOModel.FK__IL_PATIO___PATIO__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="IL_PATIOModel.FK__IL_PATIO___VISIT__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="IL_PATIOModel.FK__IL_PATIO___WAITE__5441852A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

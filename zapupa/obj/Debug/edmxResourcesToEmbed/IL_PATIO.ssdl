@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище IL_PATIOModel1" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="IL_PATIO_RESTARAUNT">
+    <Key>
+      <PropertyRef Name="IL_PATIO_RESTARAUNT" />
+    </Key>
+    <Property Name="IL_PATIO_RESTARAUNT" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PATIO_ADDRESS_ID" Type="int" Nullable="false" />
+    <Property Name="WAITER_ID" Type="int" Nullable="false" />
+    <Property Name="VISITOR_ID" Type="int" Nullable="false" />
+    <Property Name="ITALIAN_MENU_PATIO_ID" Type="int" Nullable="false" />
+    <Property Name="JAPANESE_MENU_PATIO_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ITALIAN_MENU_PATIO">
+    <Key>
+      <PropertyRef Name="ID_ITALIAN_MENU_PATIO" />
+    </Key>
+    <Property Name="ID_ITALIAN_MENU_PATIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ITALIAN_FOOD_PATIO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="ITALIAN_FOOD_PATIO_PRICE" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JAPANESE_MENU_PATIO">
+    <Key>
+      <PropertyRef Name="ID_JAPANESE_MENU_PATIO" />
+    </Key>
+    <Property Name="ID_JAPANESE_MENU_PATIO" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JAPANESE_FOOD_PATIO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="JAPANESE_FOOD_PATIO_PRICE" Type="varchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PATIO_ADDRESS">
+    <Key>
+      <PropertyRef Name="ID_PATIO_ADDRESS" />
+    </Key>
+    <Property Name="ID_PATIO_ADDRESS" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PATIO_ADDRESS_STREET" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PATIO_ADDRESS_HOUSE" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VISITOR">
+    <Key>
+      <PropertyRef Name="ID_VISITOR" />
+    </Key>
+    <Property Name="ID_VISITOR" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SURNAME" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NAME_VISITOR" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MIDDLE_NAME" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="WAITER">
+    <Key>
+      <PropertyRef Name="ID_WAITER" />
+    </Key>
+    <Property Name="ID_WAITER" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SURNAME" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="NAME_WAITER" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MIDDLE_NAME" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <Association Name="FK__IL_PATIO___ITALI__5629CD9C">
+    <End Role="ITALIAN_MENU_PATIO" Type="Self.ITALIAN_MENU_PATIO" Multiplicity="1" />
+    <End Role="IL_PATIO_RESTARAUNT" Type="Self.IL_PATIO_RESTARAUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ITALIAN_MENU_PATIO">
+        <PropertyRef Name="ID_ITALIAN_MENU_PATIO" />
+      </Principal>
+      <Dependent Role="IL_PATIO_RESTARAUNT">
+        <PropertyRef Name="ITALIAN_MENU_PATIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IL_PATIO___JAPAN__571DF1D5">
+    <End Role="JAPANESE_MENU_PATIO" Type="Self.JAPANESE_MENU_PATIO" Multiplicity="1" />
+    <End Role="IL_PATIO_RESTARAUNT" Type="Self.IL_PATIO_RESTARAUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JAPANESE_MENU_PATIO">
+        <PropertyRef Name="ID_JAPANESE_MENU_PATIO" />
+      </Principal>
+      <Dependent Role="IL_PATIO_RESTARAUNT">
+        <PropertyRef Name="JAPANESE_MENU_PATIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IL_PATIO___PATIO__534D60F1">
+    <End Role="PATIO_ADDRESS" Type="Self.PATIO_ADDRESS" Multiplicity="1" />
+    <End Role="IL_PATIO_RESTARAUNT" Type="Self.IL_PATIO_RESTARAUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PATIO_ADDRESS">
+        <PropertyRef Name="ID_PATIO_ADDRESS" />
+      </Principal>
+      <Dependent Role="IL_PATIO_RESTARAUNT">
+        <PropertyRef Name="PATIO_ADDRESS_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IL_PATIO___VISIT__5535A963">
+    <End Role="VISITOR" Type="Self.VISITOR" Multiplicity="1" />
+    <End Role="IL_PATIO_RESTARAUNT" Type="Self.IL_PATIO_RESTARAUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VISITOR">
+        <PropertyRef Name="ID_VISITOR" />
+      </Principal>
+      <Dependent Role="IL_PATIO_RESTARAUNT">
+        <PropertyRef Name="VISITOR_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__IL_PATIO___WAITE__5441852A">
+    <End Role="WAITER" Type="Self.WAITER" Multiplicity="1" />
+    <End Role="IL_PATIO_RESTARAUNT" Type="Self.IL_PATIO_RESTARAUNT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WAITER">
+        <PropertyRef Name="ID_WAITER" />
+      </Principal>
+      <Dependent Role="IL_PATIO_RESTARAUNT">
+        <PropertyRef Name="WAITER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище IL_PATIOModel1Container">
+    <EntitySet Name="IL_PATIO_RESTARAUNT" EntityType="Self.IL_PATIO_RESTARAUNT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITALIAN_MENU_PATIO" EntityType="Self.ITALIAN_MENU_PATIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JAPANESE_MENU_PATIO" EntityType="Self.JAPANESE_MENU_PATIO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PATIO_ADDRESS" EntityType="Self.PATIO_ADDRESS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VISITOR" EntityType="Self.VISITOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WAITER" EntityType="Self.WAITER" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__IL_PATIO___ITALI__5629CD9C" Association="Self.FK__IL_PATIO___ITALI__5629CD9C">
+      <End Role="ITALIAN_MENU_PATIO" EntitySet="ITALIAN_MENU_PATIO" />
+      <End Role="IL_PATIO_RESTARAUNT" EntitySet="IL_PATIO_RESTARAUNT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IL_PATIO___JAPAN__571DF1D5" Association="Self.FK__IL_PATIO___JAPAN__571DF1D5">
+      <End Role="JAPANESE_MENU_PATIO" EntitySet="JAPANESE_MENU_PATIO" />
+      <End Role="IL_PATIO_RESTARAUNT" EntitySet="IL_PATIO_RESTARAUNT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IL_PATIO___PATIO__534D60F1" Association="Self.FK__IL_PATIO___PATIO__534D60F1">
+      <End Role="PATIO_ADDRESS" EntitySet="PATIO_ADDRESS" />
+      <End Role="IL_PATIO_RESTARAUNT" EntitySet="IL_PATIO_RESTARAUNT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IL_PATIO___VISIT__5535A963" Association="Self.FK__IL_PATIO___VISIT__5535A963">
+      <End Role="VISITOR" EntitySet="VISITOR" />
+      <End Role="IL_PATIO_RESTARAUNT" EntitySet="IL_PATIO_RESTARAUNT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__IL_PATIO___WAITE__5441852A" Association="Self.FK__IL_PATIO___WAITE__5441852A">
+      <End Role="WAITER" EntitySet="WAITER" />
+      <End Role="IL_PATIO_RESTARAUNT" EntitySet="IL_PATIO_RESTARAUNT" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

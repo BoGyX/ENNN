@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище IL_PATIOModel1Container" CdmEntityContainer="IL_PATIOEntities1">
+    <EntitySetMapping Name="IL_PATIO_RESTARAUNT">
+      <EntityTypeMapping TypeName="IL_PATIOModel1.IL_PATIO_RESTARAUNT">
+        <MappingFragment StoreEntitySet="IL_PATIO_RESTARAUNT">
+          <ScalarProperty Name="IL_PATIO_RESTARAUNT1" ColumnName="IL_PATIO_RESTARAUNT" />
+          <ScalarProperty Name="PATIO_ADDRESS_ID" ColumnName="PATIO_ADDRESS_ID" />
+          <ScalarProperty Name="WAITER_ID" ColumnName="WAITER_ID" />
+          <ScalarProperty Name="VISITOR_ID" ColumnName="VISITOR_ID" />
+          <ScalarProperty Name="ITALIAN_MENU_PATIO_ID" ColumnName="ITALIAN_MENU_PATIO_ID" />
+          <ScalarProperty Name="JAPANESE_MENU_PATIO_ID" ColumnName="JAPANESE_MENU_PATIO_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITALIAN_MENU_PATIO">
+      <EntityTypeMapping TypeName="IL_PATIOModel1.ITALIAN_MENU_PATIO">
+        <MappingFragment StoreEntitySet="ITALIAN_MENU_PATIO">
+          <ScalarProperty Name="ID_ITALIAN_MENU_PATIO" ColumnName="ID_ITALIAN_MENU_PATIO" />
+          <ScalarProperty Name="ITALIAN_FOOD_PATIO" ColumnName="ITALIAN_FOOD_PATIO" />
+          <ScalarProperty Name="ITALIAN_FOOD_PATIO_PRICE" ColumnName="ITALIAN_FOOD_PATIO_PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JAPANESE_MENU_PATIO">
+      <EntityTypeMapping TypeName="IL_PATIOModel1.JAPANESE_MENU_PATIO">
+        <MappingFragment StoreEntitySet="JAPANESE_MENU_PATIO">
+          <ScalarProperty Name="ID_JAPANESE_MENU_PATIO" ColumnName="ID_JAPANESE_MENU_PATIO" />
+          <ScalarProperty Name="JAPANESE_FOOD_PATIO" ColumnName="JAPANESE_FOOD_PATIO" />
+          <ScalarProperty Name="JAPANESE_FOOD_PATIO_PRICE" ColumnName="JAPANESE_FOOD_PATIO_PRICE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PATIO_ADDRESS">
+      <EntityTypeMapping TypeName="IL_PATIOModel1.PATIO_ADDRESS">
+        <MappingFragment StoreEntitySet="PATIO_ADDRESS">
+          <ScalarProperty Name="ID_PATIO_ADDRESS" ColumnName="ID_PATIO_ADDRESS" />
+          <ScalarProperty Name="PATIO_ADDRESS_STREET" ColumnName="PATIO_ADDRESS_STREET" />
+          <ScalarProperty Name="PATIO_ADDRESS_HOUSE" ColumnName="PATIO_ADDRESS_HOUSE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VISITOR">
+      <EntityTypeMapping TypeName="IL_PATIOModel1.VISITOR">
+        <MappingFragment StoreEntitySet="VISITOR">
+          <ScalarProperty Name="ID_VISITOR" ColumnName="ID_VISITOR" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="NAME_VISITOR" ColumnName="NAME_VISITOR" />
+          <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="WAITER">
+      <EntityTypeMapping TypeName="IL_PATIOModel1.WAITER">
+        <MappingFragment StoreEntitySet="WAITER">
+          <ScalarProperty Name="ID_WAITER" ColumnName="ID_WAITER" />
+          <ScalarProperty Name="SURNAME" ColumnName="SURNAME" />
+          <ScalarProperty Name="NAME_WAITER" ColumnName="NAME_WAITER" />
+          <ScalarProperty Name="MIDDLE_NAME" ColumnName="MIDDLE_NAME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
